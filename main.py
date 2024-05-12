@@ -18,7 +18,7 @@ class Mp3PlayerApp(App):
         path_to_files=  os.path.join(os.getcwd(),'sounds')
         files=os.listdir(path_to_files)
         for file in files:
-            if file.startswith(number) and file.endswith('.mp3'):
+            if file.startswith(number+' ') and file.endswith('.mp3'):
                 sound= SoundLoader.load(os.path.join(path_to_files, file))
                 if sound:
                     sound.play()
